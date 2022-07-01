@@ -41,7 +41,7 @@ const MyApp = ({ Component, pageProps }) => {
     //     }, 100)
     //   }
     // }
-  }
+  };
 
   return (
     <>
