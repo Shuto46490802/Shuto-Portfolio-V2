@@ -1,6 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withTM = require('next-transpile-modules')([
+  'three',
+  'gsap'
+])
 
-module.exports = nextConfig
+const withImages = require('next-images')
+
+module.exports = withTM(withImages({
+  images: {
+    domains: [],
+  },
+  webpack(config, options) {
+    return config
+  }
+}))
