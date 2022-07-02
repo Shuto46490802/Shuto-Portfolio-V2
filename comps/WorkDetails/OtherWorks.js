@@ -18,7 +18,7 @@ const OtherWorks = ({ works }) => {
         gsap.registerPlugin(ScrollTrigger);
     }, [])
 
-    const { GLColor, getGLSize, getParams, isTouch, wrapperOffsetContent, color, isEntering } = useGlobalStates()
+    const { GLColor, getGLSize, getParams, isTouch, wrapperOffsetContent, color, isPageReady } = useGlobalStates()
     //GL
     const imageWrapperRef = useRef()
     const GLContainerRef = useRef()
@@ -131,10 +131,10 @@ const OtherWorks = ({ works }) => {
     }, [wrapperOffsetContent])
 
     useEffect(() => {
-        if (!isEntering) {
+        if (isPageReady) {
             getCharOffset(charRefs.current, color, imageWrapperRef.current)
         }
-    }, [isEntering])
+    }, [isPageReady])
 
     useEffect(() => {
         if (isFirstDone) {
@@ -181,7 +181,7 @@ const OtherWorks = ({ works }) => {
                     <h2 className="other-works-header">Other Works</h2>
                     <div className="other-works-link__inner">
                         <div className="other-works-title__wrapper">
-                            <p ref={titleRef} className="other-works-title">
+                            <p ref={titleRef} className="other-works-title stroke-theme">
                                 {
                                     wrapInspan(works[titleIndex]["title"])
                                 }
@@ -197,7 +197,7 @@ const OtherWorks = ({ works }) => {
                                         <Suspense
                                             fallback={<Html center className="loading" children="" />}
                                         >
-                                            <WorkImage works={works} color={GLColor} imgIndex={imgIndex} isUp={isUp} imageWrapperRef={imageWrapperRef} setIsFirstDone={setIsFirstDone} setIsHoverReady={setIsHoverReady} isEntering={isEntering} {...props} />
+                                            <WorkImage works={works} color={GLColor} imgIndex={imgIndex} isUp={isUp} imageWrapperRef={imageWrapperRef} setIsFirstDone={setIsFirstDone} setIsHoverReady={setIsHoverReady} isPageReady={isPageReady} {...props} />
                                         </Suspense>
                                     </Canvas>
                                 </div>

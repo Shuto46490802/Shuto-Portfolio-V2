@@ -15,7 +15,6 @@ export const GlobalStatesProvider = ({ children }) => {
   const [wrapperOffsetPalette, setWrapperOffsetPalette] = useState({})
   const [isPageLoading, setIsPageLoading] = useState()
   const [isPageLoaded, setIsPageLoaded] = useState(false)
-  const [isExiting, setIsExiting] = useState(false)
   const [isEntering, setIsEntering] = useState(false)
   const [isPageReady, setIsPageReady] = useState(false)
 
@@ -162,7 +161,7 @@ export const GlobalStatesProvider = ({ children }) => {
 
 
   return (
-    <GlobalContext.Provider value={{ theme, setTheme, GLColor, setGLColor, color, setColor, isTouch, setIsTouch, wrapperOffsetMenu, wrapperOffsetContent, wrapperOffsetPalette, getParams, getGLSize, isPageLoading, setIsPageLoading, setIsPageLoaded, isPageLoaded, setIsExiting, isExiting, setIsEntering, isEntering, setIsPageReady , isPageReady}}>
+    <GlobalContext.Provider value={{ theme, setTheme, GLColor, setGLColor, color, setColor, isTouch, setIsTouch, wrapperOffsetMenu, wrapperOffsetContent, wrapperOffsetPalette, getParams, getGLSize, isPageLoading, setIsPageLoading, setIsPageLoaded, isPageLoaded, setIsEntering, isEntering, isPageReady, setIsPageReady}}>
       {children}
     </GlobalContext.Provider>
   )

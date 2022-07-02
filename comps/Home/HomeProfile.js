@@ -14,7 +14,7 @@ const HomeProfile = () => {
 
     const imageWrapperRef = useRef()
     const GLContainerRef = useRef()
-    const { getGLSize, isTouch, getParams, wrapperOffsetContent, GLColor, isEntering } = useGlobalStates()
+    const { getGLSize, isTouch, getParams, wrapperOffsetContent, GLColor, isPageReady } = useGlobalStates()
     const [isHovered, setIsHovered] = useState(false)
     const titleRef = useRef()
     const [titleParam, setTitleParam] = useState()
@@ -73,7 +73,7 @@ const HomeProfile = () => {
                                 <Suspense
                                     fallback={<Html center className="loading" children="" />}
                                 >
-                                    <HomeProfileImage color={GLColor} imageWrapperRef={imageWrapperRef} setIsHoverReady={setIsHoverReady} isEntering={isEntering} {...props} />
+                                    <HomeProfileImage color={GLColor} imageWrapperRef={imageWrapperRef} setIsHoverReady={setIsHoverReady} isPageReady={isPageReady} {...props} />
                                 </Suspense>
                             </Canvas>
                         </div>

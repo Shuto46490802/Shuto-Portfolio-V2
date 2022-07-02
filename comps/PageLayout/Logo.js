@@ -36,7 +36,7 @@ const Logo = () => {
             }}
         >
             <Link href="/" scroll={false} ariaLabel='home'>
-                <a className="logo-link d-flex flex-center text-theme should-animate" ref={logoInnerRef}>
+                <a className="logo-link d-flex flex-center text-theme should-animate text-serif" ref={logoInnerRef}>
                     <div className="logo-year">
                         <div className="logo-year-numbers">
                             <div className="logo-year-number">1</div>

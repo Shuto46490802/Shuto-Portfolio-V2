@@ -7,7 +7,7 @@ import { TextureLoader } from "three";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const WorkImage = ({ works, color, imgIndex, isUp, setIsFirstDone, imageWrapperRef, setIsHoverReady, isEntering, ...props }) => {
+const WorkImage = ({ works, color, imgIndex, isUp, setIsFirstDone, imageWrapperRef, setIsHoverReady, isPageReady, ...props }) => {
 
     const imageTextures = useLoader(TextureLoader, works.map((work) => work["main-image"]));
     const noiseTexture = useLoader(TextureLoader, '/static/noiseTexture.webp');
@@ -24,7 +24,7 @@ const WorkImage = ({ works, color, imgIndex, isUp, setIsFirstDone, imageWrapperR
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        if (!isEntering) {
+        if (isPageReady) {
             if (material.current) {
 
                 const trigger = {
@@ -86,7 +86,7 @@ const WorkImage = ({ works, color, imgIndex, isUp, setIsFirstDone, imageWrapperR
 
             };
         }
-    }, [isEntering])
+    }, [isPageReady])
 
     return (
         <WorkListImagePlane

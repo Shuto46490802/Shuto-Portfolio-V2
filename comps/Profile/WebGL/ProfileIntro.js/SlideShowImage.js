@@ -100,7 +100,6 @@ const SlideShowImage = ({ color, slideShowWrapper, setIsCharAnimReady, setIsHove
 
             }
         }
-        console.log(isPageReady)
     }, [isPageReady])
 
     //toggle images

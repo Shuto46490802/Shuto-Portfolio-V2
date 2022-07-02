@@ -9,7 +9,7 @@ import workList from "./WorkList"
 import { useGlobalStates } from "../context/global-states"
 import { onMouseLeaveTranslateScale, onMouseMoveTranslate, onMouseMoveTranslateScale } from "./animations"
 
-const MenuBar = ({ setScrollToWorks }) => {
+const MenuBar = () => {
 
     const works = workList.works
     const [paramsList, setParamsList] = useState([])
@@ -115,9 +115,6 @@ const MenuBar = ({ setScrollToWorks }) => {
                     <Link href="/" scroll={false} ariaLabel={"home works"}>
                         <a
                             className="menubar-works-link w-100 h-100 d-flex flex-column justify-content-around align-items-center"
-                            onClick={() => {
-                                setScrollToWorks(true)
-                            }}
                         >
                             <span className="frame-left grow frame-line" />
                             <span>Works</span>

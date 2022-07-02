@@ -31,7 +31,7 @@ const LocalTime = ({ localTime }) => {
     }
 
     return (
-        <div ref={localTime} className="local-time position-fixed">
+        <div ref={localTime} className="local-time position-fixed text-serif">
             local time: {time} ({meridiem}) - {day}
         </div>
     );

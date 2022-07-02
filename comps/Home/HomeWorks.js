@@ -136,7 +136,7 @@ const Homeworks = () => {
             <div className="section-title__wrapper">
                 <span className="frame-top grow frame-line" />
                 <span className="frame-bottom grow frame-line" />
-                <h2 className="section-title">
+                <h2 className="section-title text-serif">
                     projects
                     <span className="frame-right grow frame-line" />
                 </h2>
@@ -198,7 +198,7 @@ const Homeworks = () => {
                                                 }}
                                             >
                                                 <span className="frame-bottom grow frame-line" />
-                                                <p className="home-works-list-item-title">
+                                                <p className="home-works-list-item-title text-serif">
                                                     <span ref={addToTitleRefs} className="home-works-list-item-title__inner should-animate stroke-theme">
                                                         {item.title}
                                                     </span>

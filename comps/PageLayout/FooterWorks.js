@@ -18,7 +18,7 @@ const FooterWorks = () => {
         gsap.registerPlugin(ScrollTrigger);
     }, [])
 
-    const { wrapperOffsetContent, getParams, isTouch, getGLSize, GLColor, color, isEntering } = useGlobalStates()
+    const { wrapperOffsetContent, getParams, isTouch, getGLSize, GLColor, color, isPageReady } = useGlobalStates()
     const works = workList.works
 
     //Text transform
@@ -107,10 +107,10 @@ const FooterWorks = () => {
     }
 
     useEffect(() => {
-        if (!isEntering) {
+        if (isPageReady) {
             getCharOffset(charRefs.current, color, imageWrapperRef.current)
         }
-    }, [isEntering])
+    }, [isPageReady])
 
     useEffect(() => {
         if (isFirstDone) {
@@ -201,7 +201,7 @@ const FooterWorks = () => {
                                         <Suspense
                                             fallback={<Html center className="loading" children="" />}
                                         >
-                                            <WorkImage works={works} color={GLColor} imgIndex={imgIndex} isUp={isUp} imageWrapperRef={imageWrapperRef} setIsFirstDone={setIsFirstDone} setIsHoverReady={setIsHoverReady} isEntering={isEntering} {...props} />
+                                            <WorkImage works={works} color={GLColor} imgIndex={imgIndex} isUp={isUp} imageWrapperRef={imageWrapperRef} setIsFirstDone={setIsFirstDone} setIsHoverReady={setIsHoverReady} isPageReady={isPageReady} {...props} />
                                         </Suspense>
                                     </Canvas>
                                 </div>

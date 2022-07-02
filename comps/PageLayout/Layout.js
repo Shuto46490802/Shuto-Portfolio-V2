@@ -14,11 +14,11 @@ import { useRouter } from "next/router"
 //context
 import { useGlobalStates } from "../context/global-states"
 
-const Layout = ({ children, setScrollToWorks }) => {
+const Layout = ({ children }) => {
 
     const pageTransitionMaterial = useRef();
     const pageTransition = useRef();
-    const { setIsPageLoading, isPageLoading, setIsPageLoaded, setIsExiting, isExiting, setIsEntering, isEntering, setIsPageReady } = useGlobalStates()
+    const { setIsPageLoading, isPageLoading, setIsPageLoaded, setIsEntering, isEntering, setIsPageReady } = useGlobalStates()
     const router = useRouter()
     const [isRouteChangeComplete, setIsRouteChangeComplete] = useState(false)
     const [center, setCenter] = useState()
@@ -90,10 +90,8 @@ const Layout = ({ children, setScrollToWorks }) => {
                 onStart: () => {
                     pageTransition.current.style.zIndex = '100';
                     // document.body.classList.remove('isTransitionEnded');
-                    setIsExiting(true)
                 },
                 onComplete: () => {
-                    setIsExiting(false);
                     setIsEntering(true)
                 }
             })
@@ -162,7 +160,7 @@ const Layout = ({ children, setScrollToWorks }) => {
         >
             <div className="app__wrapper">
                 <Frame />
-                <MenuBar setScrollToWorks={setScrollToWorks} />
+                <MenuBar />
                 <LocalTime />
                 <SVGDefs />
                 <Cursor />

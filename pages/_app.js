@@ -18,8 +18,6 @@ import { AnimatePresence } from "framer-motion";
 const MyApp = ({ Component, pageProps }) => {
 
   const router = useRouter()
-  const [scrollToWorks, setScrollToWorks] = useState(false)
-  const homeIntroRef = useRef()
 
   const scrollTop = () => {
     // if (!scrollToWorks) {
@@ -62,14 +60,14 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
 
       <GlobalStatesProvider>
-        <Layout setScrollToWorks={setScrollToWorks}>
+        <Layout>
           <AnimatePresence
             exitBeforeEnter
             onExitComplete={() => {
               scrollTop();
             }}
           >
-            <Component key={router.asPath} homeIntroRef={homeIntroRef} {...pageProps} />
+            <Component key={router.asPath} {...pageProps} />
           </ AnimatePresence>
         </Layout>
       </GlobalStatesProvider>

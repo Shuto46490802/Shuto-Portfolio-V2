@@ -9,7 +9,7 @@ import IntroImage from "./WebGL/IntroImage/Image";
 import { useGlobalStates } from "../context/global-states";
 import { onMouseLeaveTranslateScale, onMouseMoveTranslate } from "../PageLayout/animations";
 
-const HomeIntro = ({ homeIntroRef }) => {
+const HomeIntro = () => {
 
     const textWrapperRef = useRef()
     const imgWrapperRef = useRef()
@@ -154,7 +154,7 @@ const HomeIntro = ({ homeIntroRef }) => {
     }, [isPageLoaded])
 
     return (
-        <section ref={homeIntroRef} className="home-intro d-flex flex-wrap">
+        <section className="home-intro d-flex flex-wrap">
             <div ref={textWrapperRef} className="home-intro-text__wrapper position-relative">
                 <span className="frame-right grow frame-line" />
                 <div className="home-intro-text__inner">

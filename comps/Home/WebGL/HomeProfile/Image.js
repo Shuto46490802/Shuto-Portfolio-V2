@@ -7,7 +7,7 @@ import { TextureLoader } from "three";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const HomeProfileImage = ({ color, imageWrapperRef, setIsHoverReady, isEntering, ...props }) => {
+const HomeProfileImage = ({ color, imageWrapperRef, setIsHoverReady, isPageReady, ...props }) => {
 
     const imageTexture = useLoader(TextureLoader, "/static/images/Homepage/homeProfile.jpg");
     const args = [
@@ -23,7 +23,7 @@ const HomeProfileImage = ({ color, imageWrapperRef, setIsHoverReady, isEntering,
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        if (!isEntering) {
+        if (isPageReady) {
             if (material.current) {
 
                 const trigger = {
@@ -94,7 +94,7 @@ const HomeProfileImage = ({ color, imageWrapperRef, setIsHoverReady, isEntering,
 
             }
         }
-    }, [isEntering])
+    }, [isPageReady])
 
     return (
         <ImagePlane

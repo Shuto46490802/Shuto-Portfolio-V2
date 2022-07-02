@@ -17,7 +17,7 @@ const PreLoader = () => {
             classNames={'preloader'}
             unmountOnExit
         >
-            <div className="preloader">
+            <div className="preloader text-serif">
 
                 <Frame />
 

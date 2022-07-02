@@ -9,7 +9,7 @@ import Footer from "../comps/PageLayout/Footer"
 //Libraries
 import { motion } from "framer-motion";
 
-const Home = ({ homeIntroRef }) => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ const Home = ({ homeIntroRef }) => {
         transition={{ ease: "none", duration: 0, delay: 1.3 }}
       >
         <div className="home__inner">
-          <HomeIntro homeIntroRef={homeIntroRef} />
+          <HomeIntro/>
           <Homeworks />
           <HomeProfile />
           <HomeContact />
