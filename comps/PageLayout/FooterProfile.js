@@ -92,7 +92,7 @@ const FooterProfile = () => {
     }
 
     return (
-        <div className="footer-column">
+        <div className="footer-column d-md-block d-none">
             <span className="frame-right grow frame-line" />
             <span className="frame-bottom grow frame-line" />
             <Link href="/profile" scroll={false} ariaLabel={"profile"}>

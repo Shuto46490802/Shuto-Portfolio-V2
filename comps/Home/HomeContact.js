@@ -86,7 +86,7 @@ const HomeContact = () => {
                     <Link href="mailto:hello@shutosuganuma.com" scroll={false} ariaLabel='mail'>
                         <a className="home-contact-address-link text-mode2" aria-label='mail'>
                             <div ref={autoScroller} className="home-contact-address-autoScroller should-animate">
-                                <div ref={autoScrollerInner} className="home-contact-address-autoScroller__inner should-animate">
+                                <div ref={autoScrollerInner} className="home-contact-address-autoScroller__inner should-animate text-serif">
                                     <span ref={autoScrollerText} className="home-contact-address">
                                         <span className="home-contact-address-text stroke-theme">
                                             hello@shutosuganuma.com

@@ -17,11 +17,11 @@ const PreLoader = () => {
             classNames={'preloader'}
             unmountOnExit
         >
-            <div className="preloader text-serif">
+            <div className="preloader">
 
                 <Frame />
 
-                <div className="preloader-year">
+                <div className="preloader-year text-num">
                     <div className="preloader-year-numbers">
                         <div className="preloader-year-number">1</div>
                         <div className="preloader-year-number">2</div>
@@ -82,7 +82,7 @@ const PreLoader = () => {
                     </div>
                 </div>
 
-                <div className="preloader-initials">
+                <div className="preloader-initials text-serif">
                     <div className="preloader-initials-text-1__wrapper preloader-initials-text__wrapper">
                         <div className="preloader-initials-text__1 preloader-initials-text">
                             S

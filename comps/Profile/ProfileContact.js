@@ -163,7 +163,7 @@ const ProfileContact = () => {
                         {
                             texts.map((text, index) => (
                                 <div ref={addToAutoScrollerRefs} key={index} className="profile-contact-autoScroller should-animate">
-                                    <div ref={addToAutoScrollerInnerRefs} className="profile-contact-autoScroller__inner should-animate stroke-theme">
+                                    <div ref={addToAutoScrollerInnerRefs} className="profile-contact-autoScroller__inner should-animate stroke-theme text-serif">
                                         <span ref={addToAutoScrollerTextRefs} className="profile-contact-autoScroller-text">
                                             {text}
                                         </span>

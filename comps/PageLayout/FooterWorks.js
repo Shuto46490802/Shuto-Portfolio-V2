@@ -186,7 +186,7 @@ const FooterWorks = () => {
                         Works
                     </h3>
                     <div className="footer-works__wrapper">
-                        <div className="footer-works__inner">
+                        <div className="footer-works__inner text-serif">
                             <p ref={titleRef} className="footer-works-title should-animate stroke-theme">
                                 {wrapInspan(works[titleIndex].title)}
                             </p>

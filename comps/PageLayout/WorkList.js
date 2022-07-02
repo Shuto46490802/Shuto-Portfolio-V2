@@ -28,9 +28,6 @@ const workList = {
                         "/static/images/Works/Shuto Portfolio/design4.jpg",
                         "/static/images/Works/Shuto Portfolio/design5.jpg",
                         "/static/images/Works/Shuto Portfolio/design6.jpg",
-                        "/static/images/Works/Shuto Portfolio/design7.jpg",
-                        "/static/images/Works/Shuto Portfolio/design8.jpg",
-                        "/static/images/Works/Shuto Portfolio/design9.jpg",
                     ],
                     "overview": [
                         "My goal for this portfolio in terms of design was minimal and retro design. I've aimed to achieve this goal by integrating grid and typography into the design and the frames that soround the contents and the grainy background are to make the page have the retro feeling.",

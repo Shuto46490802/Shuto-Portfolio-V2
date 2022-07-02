@@ -104,7 +104,7 @@ const FooterCopyRights = () => {
                     }
                 </div>
             </div>
-            <p className="footer-copy-right">
+            <p className="footer-copy-right text-serif">
                 <span className="footer-copy-right__inner">
                     <span className="footer-copy-right-text">©</span>
                     <span className="footer-copy-right-text ps-1">shuto</span>

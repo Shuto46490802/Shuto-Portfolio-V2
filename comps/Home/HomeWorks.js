@@ -144,6 +144,18 @@ const Homeworks = () => {
                     <rect style={{ fill: "url(#star-pattern-2)" }} x="0" y="0" height="100%" width="100%"></rect>
                 </svg>
             </div>
+            <div className="home-works-subtitle__wrapper d-md-none d-flex">
+                <span className="frame-top grow frame-line" />
+                <span className="frame-right grow frame-line" />
+                <p className="home-works-subtitle">
+                    Every website is meaningful and require a lot of effort to reach the goals, regardless of which goal you are looking to meet.
+                </p>
+                <p className="home-works-subtitle">
+                    I can work with you to reach them. You can see someof the projects that I've worked in and see my skil set.
+                    <br />
+                    Hope you enjoy them.
+                </p>
+            </div>
             <div className="home-works-list d-md-flex flex-wrap justify-content-end position-relative">
                 {
                     workList.works.map((item, index) => {
@@ -206,7 +218,7 @@ const Homeworks = () => {
                                                 <div className="home-works-list-item-info">
                                                     <span className={`${index % 2 !== 0 ? "frame-right" : "frame-left"} grow frame-line`} />
                                                     <span className="frame-top grow frame-line d-md-none d-block" />
-                                                    <div className="home-works-list-item-info-date">
+                                                    <div className="home-works-list-item-info-date text-num">
                                                         {item.date}
                                                     </div>
                                                     <ul className="home-works-list-item-info-roles">
@@ -220,12 +232,18 @@ const Homeworks = () => {
                                             </a>
                                         </Link>
                                     </div>
-                                    <div key={`${index}-spacer`} className="home-works-list-item-spacer">
-                                        <span className="frame-bottom grow frame-line" />
-                                        <svg height="100%" width="100%" className="section-titile-spacer">
-                                            <rect style={{ fill: "url(#diagonal-stripe-1)" }} x="0" y="0" height="100%" width="100%"></rect>
-                                        </svg>
-                                    </div>
+                                    {
+                                        index !== 2
+                                            ? (
+                                                <div key={`${index}-spacer`} className="home-works-list-item-spacer">
+                                                    <span className="frame-bottom grow frame-line" />
+                                                    <svg height="100%" width="100%" className="section-titile-spacer">
+                                                        <rect style={{ fill: "url(#diagonal-stripe-1)" }} x="0" y="0" height="100%" width="100%"></rect>
+                                                    </svg>
+                                                </div>
+                                            )
+                                            : null
+                                    }
                                 </>
                             )
                         } else if (index < 5) {
@@ -234,7 +252,7 @@ const Homeworks = () => {
                                     {
                                         index === 3
                                             ? (
-                                                <div key={`${index}-subtitle`} className="home-works-subtitle__wrapper d-flex flex-column">
+                                                <div key={`${index}-subtitle`} className="home-works-subtitle__wrapper d-md-flex d-none flex-column">
                                                     <span className="frame-top grow frame-line" />
                                                     <span className="frame-right grow frame-line" />
                                                     <p className="home-works-subtitle">
@@ -304,7 +322,7 @@ const Homeworks = () => {
                                                 </p>
                                                 <div className="home-works-list-item-info">
                                                     <span className="frame-top grow frame-line" />
-                                                    <div className="home-works-list-item-info-date">
+                                                    <div className="home-works-list-item-info-date text-serif">
                                                         {item.date}
                                                     </div>
                                                     <ul className="home-works-list-item-info-roles">

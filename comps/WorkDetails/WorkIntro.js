@@ -13,7 +13,7 @@ const WorkIntro = ({ work }) => {
                             <Image src={work["main-image"]} layout="fill" objectFit="cover" />
                         </figure>
                     </div>
-                    <h1 className="work-details-intro-title">
+                    <h1 className="work-details-intro-title text-serif">
                         <span className="frame-top grow frame-line d-md-none d-block" />
                         <span className="work-details-intro-title__inner">
                             {work["title"]}

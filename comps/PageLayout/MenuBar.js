@@ -21,7 +21,7 @@ const MenuBar = () => {
             textRefs.current = [];
         }
     };
-    const { isTouch, wrapperOffsetMenu, getParams } = useGlobalStates()
+    const { isTouch, wrapperOffsetMenu, getParams, isPageLoaded } = useGlobalStates()
     const router = useRouter()
 
     useEffect(() => {
@@ -75,9 +75,9 @@ const MenuBar = () => {
                             </div>
                         </a>
                     </Link>
-                    <Link href="/contact" scroll={false} ariaLabel='profile'>
+                    <Link href="mailto:hello@shutosuganuma.com" scroll={false} ariaLabel='profile'>
                         <a
-                            className="menubar-nav_link__inner w-50 h-100"
+                            className="menubar-nav_link__inner w-50 h-100 d-md-block d-none"
                             onMouseMove={(e) => {
                                 if (!isTouch) {
                                     onMouseMoveTranslateScale(e, textRefs.current[1], paramsList[1], 20, 10, wrapperOffsetMenu.x, wrapperOffsetMenu.y, 1.3);
@@ -94,6 +94,29 @@ const MenuBar = () => {
                             >
                                 <span className="frame-left grow frame-line" />
                                 <span ref={addToTextRefs} className="menubar-nav-link-text position-absolute should-animate">Contact</span>
+                            </div>
+                        </a>
+                    </Link>
+
+                    <Link href="/" scroll={false} ariaLabel=''>
+                        <a
+                            className={`menubar-nav_link__inner w-50 h-100 d-md-none d-block ${router.asPath === "/" ? "bg-theme" : ""}`}
+                            onMouseMove={(e) => {
+                                if (!isTouch) {
+                                    onMouseMoveTranslateScale(e, textRefs.current[2], paramsList[2], 20, 10, wrapperOffsetMenu.x, wrapperOffsetMenu.y, 1.3);
+                                }
+                            }}
+                            onMouseLeave={() => {
+                                if (!isTouch) {
+                                    onMouseLeaveTranslateScale(textRefs.current[2], 1)
+                                }
+                            }}
+                        >
+                            <div
+                                className="menubar-nav-link w-100 h-100 position-relative"
+                            >
+                                <span className="frame-left grow frame-line" />
+                                <span ref={addToTextRefs} className="menubar-nav-link-text position-absolute should-animate">Home</span>
                             </div>
                         </a>
                     </Link>

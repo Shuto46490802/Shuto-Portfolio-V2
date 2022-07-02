@@ -330,12 +330,13 @@ const ProfileSkill = () => {
                 <svg height="100%" width="100%" className="section-titile-spacer">
                     <rect style={{ fill: "url(#diagonal-stripe-2)" }} x="0" y="0" height="100%" width="100%"></rect>
                 </svg>
-                <h2 className="section-title">
+                <h2 className="section-title text-serif">
                     skills
                     <span className="frame-left grow frame-line" />
                 </h2>
             </div>
             <div className="profile-skill-text__wrapper">
+                <span className="frame-bottom grow frame-line" />
                 <span className="frame-right grow frame-line" />
                 <div className="profile-skill-text__inner">
                     <h1 className="profile-skill-title">
@@ -364,8 +365,8 @@ const ProfileSkill = () => {
                                     <li key={index} className={`profile-tech-chart-item profile-tech-chart-item__${index}`}>
                                         <span className="frame-top grow frame-line" />
                                         <span className="frame-bottom grow frame-line" />
-                                        <span className="frame-left grow frame-line" />
                                         <span className="frame-right grow frame-line" />
+                                        <span className="frame-left grow frame-line" />
                                         {tech.svg}
                                     </li>
                                 )

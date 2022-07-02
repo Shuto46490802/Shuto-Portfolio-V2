@@ -55,7 +55,7 @@ const HomeProfile = () => {
                 <svg height="100%" width="100%" className="section-titile-spacer">
                     <rect style={{ fill: "url(#star-pattern-1)" }} x="0" y="0" height="100%" width="100%"></rect>
                 </svg>
-                <h2 className="section-title">
+                <h2 className="section-title text-serif">
                     profile
                     <span className="frame-left grow frame-line" />
                 </h2>
@@ -109,7 +109,7 @@ const HomeProfile = () => {
                             }
                         }}
                     >
-                        <h2 ref={titleRef} className="home-profile-link-text should-animate stroke-theme">
+                        <h2 ref={titleRef} className="home-profile-link-text should-animate stroke-theme text-serif">
                             profile
                         </h2>
                     </a>

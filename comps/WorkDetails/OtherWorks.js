@@ -181,7 +181,7 @@ const OtherWorks = ({ works }) => {
                     <h2 className="other-works-header">Other Works</h2>
                     <div className="other-works-link__inner">
                         <div className="other-works-title__wrapper">
-                            <p ref={titleRef} className="other-works-title stroke-theme">
+                            <p ref={titleRef} className="other-works-title stroke-theme text-serif">
                                 {
                                     wrapInspan(works[titleIndex]["title"])
                                 }

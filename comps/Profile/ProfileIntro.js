@@ -214,7 +214,7 @@ const ProfileIntro = () => {
                         </div>
                     </div>
                     <div
-                        className={`profile-intro-slideshow-gl__wrapper-copy ${isCharAnimReady ? "is-playing" : ""}`}
+                        className={`profile-intro-slideshow-gl__wrapper-copy text-serif ${isCharAnimReady ? "is-playing" : ""}`}
                         onMouseMove={(e) => {
                             if (!isTouch && isHoverReady2) {
                                 const x = (e.clientX / window.innerWidth) * 2 - 1

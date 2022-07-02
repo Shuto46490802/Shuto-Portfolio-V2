@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
     const pageTransitionMaterial = useRef();
     const pageTransition = useRef();
-    const { setIsPageLoading, isPageLoading, setIsPageLoaded, setIsEntering, isEntering, setIsPageReady } = useGlobalStates()
+    const { setIsPageLoading, isPageLoading, setIsPageLoaded, setIsEntering, isEntering, setIsPageReady, isPageLoaded } = useGlobalStates()
     const router = useRouter()
     const [isRouteChangeComplete, setIsRouteChangeComplete] = useState(false)
     const [center, setCenter] = useState()

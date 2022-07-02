@@ -21,12 +21,12 @@ const MyApp = ({ Component, pageProps }) => {
 
   const scrollTop = () => {
     // if (!scrollToWorks) {
-      setTimeout(() => {
-        window.scroll({
-          top: 1,
-          left: 0
-        });
-      }, 500)
+    setTimeout(() => {
+      window.scroll({
+        top: 1,
+        left: 0
+      });
+    }, 500)
     // } else {
     //   if (homeIntroRef.current) {
     //     window.scroll({
@@ -57,6 +57,9 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="twitter:title" content="Shuto Suganuma Portfolio" />
         <meta name="twitter:description" content="This is the portfolio website of Shuto Suganuma, Front-End Web Developer. I'm very passionate about building an innovative and creative website that help you with your goals, and I will always do my best to live up to your expectations and think outside the box and face challenges with my passion and determination." />
         <meta name="twitter:image" content="https://shutosuganuma.com/ogp.jpg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
       </Head>
 
       <GlobalStatesProvider>
