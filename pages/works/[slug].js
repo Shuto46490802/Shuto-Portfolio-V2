@@ -37,8 +37,8 @@ const Work = ({ workDetails }) => {
                         <Execution2 num={"2"} content={work["page content"]["execution2"]} side={"right"} />
                         <Execution num={"3"} content={work["page content"]["execution3"]} side={"left"} />
                         <OtherWorks works={otherWorks} />
-                        <Footer />
                     </section>
+                    <Footer />
                 </div>
             </motion.section>
         </>

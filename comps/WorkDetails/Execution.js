@@ -6,14 +6,17 @@ import SwiperCore, { Navigation } from 'swiper';
 import { gsap } from "gsap"
 import { useGlobalStates } from "../context/global-states";
 import { onMouseMoveTranslate, onMouseLeaveTranslateScale } from "../PageLayout/animations";
+import { useInView } from 'react-intersection-observer';
 SwiperCore.use([Navigation]);
 
 const Execution = ({ num, content, side }) => {
 
     const firstDigitRef = useRef()
     const totalFirstDigitRef = useRef()
-    const [imgIndex, setImgIndex] = useState(1)
     const { getParams, wrapperOffsetContent, isTouch } = useGlobalStates()
+    const [imgIndex, setImgIndex] = useState(1)
+    const imageRef = useRef()
+    const [ref, inView] = useInView()
 
     const getNavIndicator = (num) => {
         if (num < 10) {
@@ -24,7 +27,7 @@ const Execution = ({ num, content, side }) => {
             }
 
             return (
-                <div className="work-details-execution-nav-indicator">
+                <div className="work-details-execution-nav-indicator text-num">
                     <p className="work-details-execution-nav-indicator-current">
                         <span className="digits">
                             <span className="digit-item">
@@ -145,6 +148,18 @@ const Execution = ({ num, content, side }) => {
         }
     }, [wrapperOffsetContent])
 
+    useEffect(() => {
+        if(inView){
+            if(imageRef.current){
+                gsap.to(imageRef.current,
+                    {
+                        opacity: 1,
+                        duration: 0.4
+                    })
+            }
+        }
+    }, [inView])
+
     return (
         <>
             <section className={`work-details-execution ${side}`}>
@@ -160,16 +175,19 @@ const Execution = ({ num, content, side }) => {
                 </div>
                 <div className="work-details-execution-image__wrapper">
                     <div className="work-details-execution-image__inner">
-                        <div className="work-details-execution-image bg-theme">
+                        <div ref={ref} className="work-details-execution-image bg-theme">
                             <Swiper
                                 className="swiper-container"
                                 direction="vertical"
                                 loop
                                 navigation={{
-                                    nextEl: '.work-details-execution-button-next',
-                                    prevEl: '.work-details-execution-button-prev'
+                                    nextEl: `.work-details-execution-button-next__${num}`,
+                                    prevEl: `.work-details-execution-button-prev__${num}`
                                 }}
-                                onSlideChange={(params) => setImgIndex(params.realIndex + 1)}
+                                onSlideChange={(params) => {
+                                    setImgIndex(params.realIndex + 1)
+                                }}
+                                ref={imageRef}
                             >
                                 {
                                     content["images"].map((image, index) => (
@@ -189,7 +207,7 @@ const Execution = ({ num, content, side }) => {
                                     <span className="frame-left grow frame-line" />
                                     <span className="frame-right grow frame-line" />
                                     <button
-                                        className="square-nav-button square-nav-button-prev work-details-execution-button-prev"
+                                        className={`square-nav-button square-nav-button-prev work-details-execution-button-prev__${num}`}
                                         onMouseMove={(e) => {
                                             if (!isTouch) {
                                                 onMouseMoveTranslate(e, arrowRefs.current[0], arrowParamsList[0], 5, 5, wrapperOffsetContent.x, wrapperOffsetContent.y, 1);
@@ -206,7 +224,7 @@ const Execution = ({ num, content, side }) => {
                                         <span ref={addToArrownRefs} className="square-nav-button-arrow should-animate" />
                                     </button>
                                     <button
-                                        className="square-nav-button square-nav-button-next work-details-execution-button-next"
+                                        className={`square-nav-button square-nav-button-next work-details-execution-button-next__${num}`}
                                         onMouseMove={(e) => {
                                             if (!isTouch) {
                                                 onMouseMoveTranslate(e, arrowRefs.current[1], arrowParamsList[1], 5, 5, wrapperOffsetContent.x, wrapperOffsetContent.y, 1);
@@ -243,7 +261,7 @@ const Execution = ({ num, content, side }) => {
                     </div>
                 </div>
             </section>
-            <div style={{marginBottom: "-2px"}} className={`work-details-spacer left ${num === "3" ? "last" : ""}`}>
+            <div style={{ marginBottom: "-2px" }} className={`work-details-spacer left ${num === "3" ? "last" : ""}`}>
                 <span className="frame-left grow frame-line" />
                 <span className="frame-bottom grow frame-line" />
                 <svg height="100%" width="100%" className="section-titile-spacer">

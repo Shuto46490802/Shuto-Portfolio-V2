@@ -1,17 +1,40 @@
 import React, { useEffect, useRef } from "react"
 //Libraries
 import { useInView } from 'react-intersection-observer';
+import { gsap } from "gsap";
 
 const Execution2 = ({ num, content, side }) => {
 
-    const { ref, inView } = useInView({});
-    const videoRef = useRef()
+    const [ref1, inView1] = useInView();
+    const [ref2, inView2] = useInView();
+    const videoRefs = useRef([]);
+    const addToVideoRefs = (_el) => {
+        if (_el && !videoRefs.current.includes(_el)) {
+            videoRefs.current.push(_el)
+        } else {
+            videoRefs.current = [];
+        }
+    };
 
     useEffect(() => {
-        if(inView){
-            videoRef.current.play()
+        if (inView1) {
+            videoRefs.current[0].play()
+            gsap.to(videoRefs.current[0],
+                {
+                    opacity: 1,
+                    duration: 0.4
+                })
         }
-    }, [inView])
+
+        if (inView2) {
+            videoRefs.current[1].play()
+            gsap.to(videoRefs.current[1],
+                {
+                    opacity: 1,
+                    duration: 0.4
+                })
+        }
+    }, [inView1, inView2])
 
     return (
         <>
@@ -25,19 +48,22 @@ const Execution2 = ({ num, content, side }) => {
                         {content["title"]}
                     </p>
                 </div>
-                <div ref={ref} className="work-details-execution-video__wrapper">
+                <div className="work-details-execution-video__wrapper">
                     <div className="work-details-execution-video__inner">
-                        {
-                            content["videos"].map((video, index) => (
-                                <div className={`work-details-execution-video work-details-execution-video__${index + 1} bg-theme`}>
-                                    <span className="frame-top grow frame-line" />
-                                    <span className="frame-bottom grow frame-line" />
-                                    <figure className="fig__wrapper">
-                                        <video ref={videoRef} src={video} muted loop playsInline />
-                                    </figure>
-                                </div>
-                            ))
-                        }
+                        <div ref={ref1} className={`work-details-execution-video work-details-execution-video__1 bg-theme`}>
+                            <span className="frame-top grow frame-line" />
+                            <span className="frame-bottom grow frame-line" />
+                            <figure className="fig__wrapper">
+                                <video ref={addToVideoRefs} src={content["videos"][0]} muted loop playsInline />
+                            </figure>
+                        </div>
+                        <div ref={ref2} className={`work-details-execution-video work-details-execution-video__2 bg-theme`}>
+                            <span className="frame-top grow frame-line" />
+                            <span className="frame-bottom grow frame-line" />
+                            <figure className="fig__wrapper">
+                                <video ref={addToVideoRefs} src={content["videos"][1]} muted loop playsInline />
+                            </figure>
+                        </div>
                     </div>
                 </div>
             </section>

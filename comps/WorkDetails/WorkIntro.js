@@ -1,14 +1,50 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useRef } from "react"
 import Image from "next/image"
+//Libraries
+import { gsap } from "gsap"
+import { useInView } from 'react-intersection-observer';
+//Context
+import { useGlobalStates } from "../context/global-states"
 
 const WorkIntro = ({ work }) => {
+
+    const imageRef = useRef()
+    const { isPageLoaded, isEntering } = useGlobalStates()
+    const videoRef = useRef()
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (isPageLoaded) {
+            if (!isEntering) {
+                if (imageRef.current) {
+                    gsap.to(imageRef.current,
+                        {
+                            opacity: 1,
+                            duration: 0.4
+                        })
+                }
+            }
+        }
+    }, [isPageLoaded, isEntering])
+
+    useEffect(() => {
+        if (inView) {
+            if (videoRef.current) {
+                gsap.to(videoRef.current,
+                    {
+                        opacity: 1,
+                        duration: 0.4
+                    })
+            }
+        }
+    }, [inView])
 
     return (
         <>
             <section className="work-details-intro">
                 <span className="frame-bottom grow frame-line" />
                 <div className="work-details-intro-image__wrapper">
-                    <div className="work-details-intro-image bg-theme">
+                    <div ref={imageRef} className="work-details-intro-image bg-theme">
                         <figure className="fig__wrapper">
                             <Image src={work["main-image"]} layout="fill" objectFit="cover" />
                         </figure>
@@ -22,7 +58,7 @@ const WorkIntro = ({ work }) => {
                 </div>
                 <div className="work-details-intro-text__wrapper">
                     <span className="frame-right grow frame-line" />
-                    <div className="work-details-intro-text-date">
+                    <div className="work-details-intro-text-date text-num">
                         {work["date"]}
                     </div>
                     <ul className="work-details-intro-text-roles">
@@ -55,13 +91,13 @@ const WorkIntro = ({ work }) => {
                     </div>
                 </div>
             </section>
-            <section className="work-details-intro-video__wrapper">
+            <section ref={ref} className="work-details-intro-video__wrapper">
                 <span className="frame-bottom grow frame-line" />
                 <div className="work-details-intro-video__inner">
                     <span className="frame-right grow frame-line" />
                     <div className="work-details-intro-video bg-theme">
                         <figure className="fig__wrapper">
-                            <video src={work["page content"]["main-video"]} muted loop playsInline autoPlay />
+                            <video ref={videoRef} src={work["page content"]["main-video"]} muted loop playsInline autoPlay />
                         </figure>
                     </div>
                 </div>

@@ -30,7 +30,7 @@ const workList = {
                         "/static/images/Works/Shuto Portfolio/design6.jpg",
                     ],
                     "overview": [
-                        "My goal for this portfolio in terms of design was minimal and retro design. I've aimed to achieve this goal by integrating grid and typography into the design and the frames that soround the contents and the grainy background are to make the page have the retro feeling.",
+                        "My goal for this portfolio in terms of design was minimal and retro design. I've aimed to achieve this goal by integrating grid and typography into the design and the frames that surround the contents and the grainy background are to make the page have the retro feeling.",
                         "My another goal on this project was to pay attention to the details. These might be too small for you to notice, but they will definitely help guide you through this portfolio. I've created a cursor that could work as navigation when it hovers over the contents that you will view/one-click to jump to contact page. I've also added a hover effect on texts and navigation so that it is easy for you to know that what contents you're hovering over.",
                         "One of my favorite details in this portfolio is the color palette. It's very small and simple, and you might almost not notice that it's there, but it's very fun to see this portfolio in defferent colors and just exciting to use."
                     ]
@@ -87,9 +87,9 @@ const workList = {
                         "/static/images/Works/Beloved Joy/authentication6.jpg",
                     ],
                     "overview": [
-                        "I have implemented Authentication process using Firebase Authentication. You can create an account / log in with your e-mail address and password. With cookies to store your access token, your login-in credentials are pretected and the website will remember you next time you visit it so that you are automatically logged in unless you choose to log-out when you leave the site.",
+                        "I have implemented Authentication process using Firebase Authentication. You can create an account / log in with your e-mail address and password. With cookies to store your access token, your login credentials are protected and the website will remember you next time you visit it so that you are automatically logged in unless you choose to log-out when you leave the site.",
                         "In the authenticated page, you can see / change your personal information as well as your password through firebase change-password process.",
-                        "In the authenticated orders page, you can look at your order history. If you go to the order detail page, you will see the details such as products details, shipping information and checkout details. I've created this process by using the information you have provided to log-in in order for me to refer to the order information in Shopify Storefront."
+                        "In the authenticated orders page, you can look at your order history. If you go to the order detail page, you will see the details such as products details, shipping information and checkout details. I've created this process by using the information you have provided to login in order for me to refer to the order information in Shopify Storefront."
                     ]
                 },
                 "execution2": {
@@ -148,7 +148,7 @@ const workList = {
                     "overview": [
                         "I've implemented a system to collect the up-to-date information concerning COVID-19 from open source API database(mathdroid and ABOUT-CORONA.NET) using REST API and Axios and when the data is updated, the app will also be automatically updated.",
                         "I've created different charts for not only infected cases, deaths and recovered, but also for daily cases, cases in different regions and so on and you can select a country from 213 countries on the selector and see the status and the total cases in each country.",
-                        "I collect data regarding the cumulative cases, active cases and incident rate from each country and visualize them in the three separate maps. The size of the circles on the map refers to the volume of the cases and the bigger the size of the circle is, the bigger the number of the cases are, so it's easy for you to see what region in the world is doing well or bad in terms for dealing with the coronavirus."
+                        "I collect data regarding the cumulative cases, active cases and incident rate from each country and visualize them in the three separate maps. The size of the circles on the map refers to the volume of the cases and the bigger the size of the circle is, the bigger the number of the cases are, so it's easy for you to see what region in the world is doing well or bad in terms of dealing with the coronavirus."
                     ]
                 },
                 "execution2": {
@@ -173,7 +173,7 @@ const workList = {
                     ],
                     "overview": [
                         "This app is designed to be responsive and compatible with desktop, tablet and mobile phone. On the desktop version, everything is packed in a screen and divided by category and you can expand/shrink the section by using the button on the right corner of the section.",
-                        "On the tablet version, I aligned the sections vertically and the page scrollable so that the each section will be big enough for you to see the contents even on the small screen.",
+                        "On the tablet version, I aligned the sections vertically and the page is scrollable so that the each section will be big enough for you to see the contents even on the small screen.",
                         "On the mobile version, I've only created one section, but you can change the section using the button on the bottom of the section and by pressing the button, popup nvigations come out and you can access the variety of information(infected cases, deaths, recover, daily/total cases and so on)."
                     ]
                 }
