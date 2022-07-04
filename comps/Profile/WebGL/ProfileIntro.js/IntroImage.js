@@ -8,7 +8,7 @@ import { gsap } from 'gsap';
 
 const IntroImage = ({ color, setIsHoverReady, isPageLoaded, isEntering, ...props }) => {
 
-    const imageTexture = useLoader(TextureLoader, "/static/images/Profile/profileIntro.jpg");
+    const imageTexture = useLoader(TextureLoader, "/images/Profile/profileIntro.jpg");
     const args = [
         1056,
         699.42,

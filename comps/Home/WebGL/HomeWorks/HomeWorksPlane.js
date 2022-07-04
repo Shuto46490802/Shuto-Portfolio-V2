@@ -10,9 +10,9 @@ import '../../../PageLayout/WebGL/PageTransitionCover/Material';
 
 const WorkImagePlane = ({ GLColor, video, material }) => {
     
-    const noiseTexture = useLoader(TextureLoader, '/static/noiseTexture.webp');
-    const bgTexture = useLoader(TextureLoader, '/static/bg.webp');
-    const sandNoiseTexture = useLoader(TextureLoader, '/static/noise.png');
+    const noiseTexture = useLoader(TextureLoader, '/noiseTexture.webp');
+    const bgTexture = useLoader(TextureLoader, '/bg.webp');
+    const sandNoiseTexture = useLoader(TextureLoader, '/noise.png');
     // const tex = new THREE.VideoTexture(video)
     const { size } = useThree();
 

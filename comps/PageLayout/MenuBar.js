@@ -75,7 +75,7 @@ const MenuBar = () => {
                             </div>
                         </a>
                     </Link>
-                    <Link href="mailto:hello@shutosuganuma.com" scroll={false} ariaLabel='profile'>
+                    <Link href="mailto:hello@shutosuganuma.dev" scroll={false} ariaLabel='profile'>
                         <a
                             className="menubar-nav_link__inner w-50 h-100 d-md-block d-none"
                             onMouseMove={(e) => {

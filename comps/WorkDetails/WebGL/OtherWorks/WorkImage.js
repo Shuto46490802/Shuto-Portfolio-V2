@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const WorkImage = ({ works, color, imgIndex, isUp, setIsFirstDone, imageWrapperRef, setIsHoverReady, isPageReady, ...props }) => {
 
     const imageTextures = useLoader(TextureLoader, works.map((work) => work["main-image"]));
-    const noiseTexture = useLoader(TextureLoader, '/static/noiseTexture.webp');
+    const noiseTexture = useLoader(TextureLoader, '/noiseTexture.webp');
     const args = [
         1120,
         700,

@@ -157,7 +157,7 @@ const ProfileContact = () => {
             }}
         >
             <span className="frame-top grow frame-line" />
-            <Link href="mailto:hello@shutosuganuma.com" scroll={false} ariaLabel='mail'>
+            <Link href="mailto:hello@shutosuganuma.dev" scroll={false} ariaLabel='mail'>
                 <a className="profile-contact-link text-mode2">
                     <div className="profile-contact-link__inner">
                         {

@@ -9,7 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HomeProfileImage = ({ color, imageWrapperRef, setIsHoverReady, isPageReady, ...props }) => {
 
-    const imageTexture = useLoader(TextureLoader, "/static/images/Homepage/homeProfile.jpg");
+    const imageTexture = useLoader(TextureLoader, "/images/Homepage/homeProfile.jpg");
     const args = [
         450,
         679,

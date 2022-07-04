@@ -4,7 +4,7 @@ const workList = {
             "title": "Shuto Portfolio",
             "roles": ["Development", "Design", "3D Animation"],
             "date": "2021-09",
-            "main-image": "/static/images/Homepage/homeIntro.jpg",
+            "main-image": "/images/Homepage/homeIntro.jpg",
             "slug": "shuto-portfolio",
             "page content": {
                 "roles": ["Web Design", "Development"],
@@ -16,18 +16,18 @@ const workList = {
                     "I'm pretty new in this field and still need to learn a lot of things, but I've put everything that I have and passion into this portfolio, I will appreciate if you take your time to take an in-depth look at the details and hope that you will enjoy it.",
                     "Again, thank you very much for visiting my portfolio and your time. Hope you're having a good time."
                 ],
-                "link": "https://shuto.suganuma.com",
-                "main-image": "/static/images/Homepage/homeIntro.jpg",
-                "main-video": "/static/images/Works/Shuto Portfolio/shuto-portfolio.mp4",
+                "link": "https://shuto.suganuma.dev",
+                "main-image": "/images/Homepage/homeIntro.jpg",
+                "main-video": "/images/Works/shuto-portfolio/shuto-portfolio.mp4",
                 "execution1": {
                     "title": "Design",
                     "images": [
-                        "/static/images/Works/Shuto Portfolio/design1.jpg",
-                        "/static/images/Works/Shuto Portfolio/design2.jpg",
-                        "/static/images/Works/Shuto Portfolio/design3.jpg",
-                        "/static/images/Works/Shuto Portfolio/design4.jpg",
-                        "/static/images/Works/Shuto Portfolio/design5.jpg",
-                        "/static/images/Works/Shuto Portfolio/design6.jpg",
+                        "/images/Works/shuto-portfolio/design1.jpg",
+                        "/images/Works/shuto-portfolio/design2.jpg",
+                        "/images/Works/shuto-portfolio/design3.jpg",
+                        "/images/Works/shuto-portfolio/design4.jpg",
+                        "/images/Works/shuto-portfolio/design5.jpg",
+                        "/images/Works/shuto-portfolio/design6.jpg",
                     ],
                     "overview": [
                         "My goal for this portfolio in terms of design was minimal and retro design. I've aimed to achieve this goal by integrating grid and typography into the design and the frames that surround the contents and the grainy background are to make the page have the retro feeling.",
@@ -38,19 +38,19 @@ const workList = {
                 "execution2": {
                     "title": "WebGL / Animation",
                     "videos": [
-                        "/static/images/Works/Shuto Portfolio/webgl1.mp4",
-                        "/static/images/Works/Shuto Portfolio/webgl2.mp4"
+                        "/images/Works/shuto-portfolio/webgl1.mp4",
+                        "/images/Works/shuto-portfolio/webgl2.mp4"
                     ],
                 },
                 "execution3": {
                     "title": "Color Palette",
                     "images": [
-                        "/static/images/Works/Shuto Portfolio/colorPalette1.jpg",
-                        "/static/images/Works/Shuto Portfolio/colorPalette2.jpg",
-                        "/static/images/Works/Shuto Portfolio/colorPalette3.jpg",
-                        "/static/images/Works/Shuto Portfolio/colorPalette4.jpg",
-                        "/static/images/Works/Shuto Portfolio/colorPalette5.jpg",
-                        "/static/images/Works/Shuto Portfolio/colorPalette6.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette1.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette2.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette3.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette4.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette5.jpg",
+                        "/images/Works/shuto-portfolio/colorPalette6.jpg",
                     ],
                     "overview": [
                         "I have picked white for the background and 6 colors for this portfolio's color scheme. I found it a bit difficult to emphasize the important contents in this portfolio without using more than two colors at a time, but that helps this portfolio have the minimal and retro feeling and I managed to make up for it with other methods such as typography, animation and so on. I've also used the colors for the filter of the images so that an united feeling could be provided to the design."
@@ -62,7 +62,7 @@ const workList = {
             "title": "Beloved Joy",
             "roles": ["Development", "Design", "Authentication", "Shopify Checkout", "Subscription"],
             "date": "2021-06",
-            "main-image": "/static/images/Works/Beloved Joy/belovedjoyIntro.jpg",
+            "main-image": "/images/Works/beloved-joy/belovedjoyIntro.jpg",
             "slug": "beloved-joy",
             "page content": {
                 "roles": ["Web Design", "Development"],
@@ -74,17 +74,17 @@ const workList = {
                     "I've implemented various functions such as authentication, checkout, subscription and so on with the technologies above. You could test the whole e-commerce experience in this website, add/delete items in a cart, checkout, sign up / sign in and view order histories, subscribe, etc. You are welcome to visit the website and test the functionality. I hope you enjoy it."
                 ],
                 "link": "https://beloved-joy.vercel.app/",
-                "main-image": "/static/images/Works/Beloved Joy/belovedjoyIntro.jpg",
-                "main-video": "/static/images/Works/Beloved Joy/belovedjoy.mp4",
+                "main-image": "/images/Works/beloved-joy/belovedjoyIntro.jpg",
+                "main-video": "/images/Works/beloved-joy/belovedjoy.mp4",
                 "execution1": {
                     "title": "Authentication",
                     "images": [
-                        "/static/images/Works/Beloved Joy/authentication1.jpg",
-                        "/static/images/Works/Beloved Joy/authentication2.jpg",
-                        "/static/images/Works/Beloved Joy/authentication3.jpg",
-                        "/static/images/Works/Beloved Joy/authentication4.jpg",
-                        "/static/images/Works/Beloved Joy/authentication5.jpg",
-                        "/static/images/Works/Beloved Joy/authentication6.jpg",
+                        "/images/Works/beloved-joy/authentication1.jpg",
+                        "/images/Works/beloved-joy/authentication2.jpg",
+                        "/images/Works/beloved-joy/authentication3.jpg",
+                        "/images/Works/beloved-joy/authentication4.jpg",
+                        "/images/Works/beloved-joy/authentication5.jpg",
+                        "/images/Works/beloved-joy/authentication6.jpg",
                     ],
                     "overview": [
                         "I have implemented Authentication process using Firebase Authentication. You can create an account / log in with your e-mail address and password. With cookies to store your access token, your login credentials are protected and the website will remember you next time you visit it so that you are automatically logged in unless you choose to log-out when you leave the site.",
@@ -95,19 +95,19 @@ const workList = {
                 "execution2": {
                     "title": "Parallax / Animation",
                     "videos": [
-                        "/static/images/Works/Beloved Joy/parallax1.mp4",
-                        "/static/images/Works/Beloved Joy/parallax2.mp4",
+                        "/images/Works/beloved-joy/parallax1.mp4",
+                        "/images/Works/beloved-joy/parallax2.mp4",
                     ],
                 },
                 "execution3": {
                     "title": "Checkout / Shopping Cart / Filter",
                     "images": [
-                        "/static/images/Works/Beloved Joy/checkout1.jpg",
-                        "/static/images/Works/Beloved Joy/checkout2.jpg",
-                        "/static/images/Works/Beloved Joy/checkout3.jpg",
-                        "/static/images/Works/Beloved Joy/checkout4.jpg",
-                        "/static/images/Works/Beloved Joy/checkout5.jpg",
-                        "/static/images/Works/Beloved Joy/checkout6.jpg",
+                        "/images/Works/beloved-joy/checkout1.jpg",
+                        "/images/Works/beloved-joy/checkout2.jpg",
+                        "/images/Works/beloved-joy/checkout3.jpg",
+                        "/images/Works/beloved-joy/checkout4.jpg",
+                        "/images/Works/beloved-joy/checkout5.jpg",
+                        "/images/Works/beloved-joy/checkout6.jpg",
                     ],
                     "overview": [
                         "I have created Shopping Cart with Local Storage and Shopify Storefront API. With these two technolgies working together, I managed to implement a system to track inventory and store / retrieve the items in the cart. After you finish shopping, you can just press the checkout button and the website leads you to Shoppify checkout page.",
@@ -120,7 +120,7 @@ const workList = {
             "title": "Covid-19 Tracker",
             "roles": ["Development", "Design", "Statics"],
             "date": "2020-10",
-            "main-image": "/static/images/Works/Covid 19 Tracker/homeWork3.jpg",
+            "main-image": "/images/Works/covid-19-tracker/homeWork3.jpg",
             "slug": "covid-19-tracker",
             "page content": {
                 "roles": ["Web Design", "Development"],
@@ -133,17 +133,17 @@ const workList = {
                     "The improvements that I'm looking to see is adding information about the global vaccine progress as well as the cases of COVID-19 variants."
                 ],
                 "link": "https://shuto46490802.github.io/covid-19-tracker/",
-                "main-image": "/static/images/Works/Covid 19 Tracker/homeWork3.jpg",
-                "main-video": "/static/images/Works/Covid 19 Tracker/covid-19-tracker.mp4",
+                "main-image": "/images/Works/covid-19-tracker/homeWork3.jpg",
+                "main-video": "/images/Works/covid-19-tracker/covid-19-tracker.mp4",
                 "execution1": {
                     "title": "Database",
                     "images": [
-                        "/static/images/Works/Covid 19 Tracker/section1.jpg",
-                        "/static/images/Works/Covid 19 Tracker/section2.jpg",
-                        "/static/images/Works/Covid 19 Tracker/section3.jpg",
-                        "/static/images/Works/Covid 19 Tracker/section4.jpg",
-                        "/static/images/Works/Covid 19 Tracker/section5.jpg",
-                        "/static/images/Works/Covid 19 Tracker/section6.jpg"
+                        "/images/Works/covid-19-tracker/section1.jpg",
+                        "/images/Works/covid-19-tracker/section2.jpg",
+                        "/images/Works/covid-19-tracker/section3.jpg",
+                        "/images/Works/covid-19-tracker/section4.jpg",
+                        "/images/Works/covid-19-tracker/section5.jpg",
+                        "/images/Works/covid-19-tracker/section6.jpg"
                     ],
                     "overview": [
                         "I've implemented a system to collect the up-to-date information concerning COVID-19 from open source API database(mathdroid and ABOUT-CORONA.NET) using REST API and Axios and when the data is updated, the app will also be automatically updated.",
@@ -154,22 +154,22 @@ const workList = {
                 "execution2": {
                     "title": "Maps / Charts",
                     "videos": [
-                        "/static/images/Works/Covid 19 Tracker/globalchart.mp4",
-                        "/static/images/Works/Covid 19 Tracker/map.mp4"
+                        "/images/Works/covid-19-tracker/globalchart.mp4",
+                        "/images/Works/covid-19-tracker/map.mp4"
                     ],
                 },
                 "execution3": {
                     "title": "Responsive design",
                     "images": [
-                        "/static/images/Works/Covid 19 Tracker/responsive1.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive2.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive3.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive4.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive5.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive6.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive7.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive8.jpg",
-                        "/static/images/Works/Covid 19 Tracker/responsive9.jpg"
+                        "/images/Works/covid-19-tracker/responsive1.jpg",
+                        "/images/Works/covid-19-tracker/responsive2.jpg",
+                        "/images/Works/covid-19-tracker/responsive3.jpg",
+                        "/images/Works/covid-19-tracker/responsive4.jpg",
+                        "/images/Works/covid-19-tracker/responsive5.jpg",
+                        "/images/Works/covid-19-tracker/responsive6.jpg",
+                        "/images/Works/covid-19-tracker/responsive7.jpg",
+                        "/images/Works/covid-19-tracker/responsive8.jpg",
+                        "/images/Works/covid-19-tracker/responsive9.jpg"
                     ],
                     "overview": [
                         "This app is designed to be responsive and compatible with desktop, tablet and mobile phone. On the desktop version, everything is packed in a screen and divided by category and you can expand/shrink the section by using the button on the right corner of the section.",

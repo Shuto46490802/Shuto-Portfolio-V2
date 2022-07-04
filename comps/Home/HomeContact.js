@@ -83,18 +83,18 @@ const HomeContact = () => {
             >
                 <span className="frame-top grow frame-line" />
                 <div className="home-contact-address__inner" >
-                    <Link href="mailto:hello@shutosuganuma.com" scroll={false} ariaLabel='mail'>
+                    <Link href="mailto:hello@shutosuganuma.dev" scroll={false} ariaLabel='mail'>
                         <a className="home-contact-address-link text-mode2" aria-label='mail'>
                             <div ref={autoScroller} className="home-contact-address-autoScroller should-animate">
                                 <div ref={autoScrollerInner} className="home-contact-address-autoScroller__inner should-animate text-serif">
                                     <span ref={autoScrollerText} className="home-contact-address">
                                         <span className="home-contact-address-text stroke-theme">
-                                            hello@shutosuganuma.com
+                                            hello@shutosuganuma.dev
                                         </span>
                                     </span>
                                     <span className="home-contact-address">
                                         <span className="home-contact-address-text stroke-theme">
-                                            hello@shutosuganuma.com
+                                            hello@shutosuganuma.dev
                                         </span>
                                     </span>
                                 </div>

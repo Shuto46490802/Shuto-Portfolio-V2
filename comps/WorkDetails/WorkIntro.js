@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import Link from "../PageLayout/Link"
 import Image from "next/image"
 //Libraries
 import { gsap } from "gsap"
@@ -12,6 +13,7 @@ const WorkIntro = ({ work }) => {
     const { isPageLoaded, isEntering } = useGlobalStates()
     const videoRef = useRef()
     const [ref, inView] = useInView();
+    const [isLinkHovered, setIsLinkHovered] = useState(false)
 
     useEffect(() => {
         if (isPageLoaded) {
@@ -73,6 +75,27 @@ const WorkIntro = ({ work }) => {
                             ))
                         }
                     </ul>
+                    <div
+                        className={`work-details-intro-text-link__wrapper ${isLinkHovered ? "is-active" : ""}`}
+                        onMouseEnter={() => {
+                            setIsLinkHovered(true)
+                        }}
+                        onMouseLeave={() => {
+                            setIsLinkHovered(false)
+                        }}
+                    >
+                        <Link href={`${work["page content"]["link"]}`} scroll={false} ariaLabel={`${work["title"]}`}>
+                            <a
+                                className={`work-details-intro-text-link`}
+                                target="_blank"
+                            >
+                                <span className="line-link">Launch Website</span>
+                                <span className="launch-arrow">
+                                    <span className="launch-arrow__inner" />
+                                </span>
+                            </a>
+                        </Link>
+                    </div>
                 </div>
             </section>
             <section className="work-details-intro-overview__wrapper">

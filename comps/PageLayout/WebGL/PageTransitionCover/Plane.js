@@ -7,9 +7,9 @@ import './Material';
 
 const PageTransitionPlane = ({ color, material, center }) => {
     
-    const bgTexture = useLoader(TextureLoader, '/static/bg.webp');
-    const noiseTexture = useLoader(TextureLoader, '/static/noiseTexture.webp');
-    const sandNoiseTexture = useLoader(TextureLoader, '/static/noise.png');
+    const bgTexture = useLoader(TextureLoader, '/bg.webp');
+    const noiseTexture = useLoader(TextureLoader, '/noiseTexture.webp');
+    const sandNoiseTexture = useLoader(TextureLoader, '/noise.png');
     const { size } = useThree();
     
     return (

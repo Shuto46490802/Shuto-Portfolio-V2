@@ -10,14 +10,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const SlideShowImage = ({ color, slideShowWrapper, setIsCharAnimReady, setIsHoverReady2, isPageReady, ...props }) => {
 
     const imageTextures = [
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow1.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow2.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow3.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow4.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow5.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow6.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow7.jpg"),
-        useLoader(TextureLoader, "/static/images/Profile/slideshow/slideShow8.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow1.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow2.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow3.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow4.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow5.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow6.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow7.jpg"),
+        useLoader(TextureLoader, "/images/Profile/slideshow/slideShow8.jpg"),
     ];
     const args = [
         1062,
