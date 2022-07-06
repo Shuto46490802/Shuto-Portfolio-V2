@@ -79,7 +79,7 @@ const Cursor = () => {
                 document.body.removeEventListener('mouseleave', onCursorLeave)
             }
         }
-    }, [isPageLoaded, isEntering])
+    }, [isPageLoaded, isEntering, isTouch])
 
     return (
         <div ref={cursorRef} className={`cursor ${isTouch ? "is-touch" : ""}`}>

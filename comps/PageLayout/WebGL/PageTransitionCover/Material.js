@@ -120,7 +120,7 @@ class PageTransitionCoverMaterial extends RawShaderMaterial {
                     value: 0
                 },
                 color: {
-                    value: new Color("")
+                    value: new Color("white")
                 }
             },
             depthTest: false,

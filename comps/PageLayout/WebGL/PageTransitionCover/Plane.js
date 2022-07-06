@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 //Libraries
 import { useLoader, useThree } from "@react-three/fiber";
 import { TextureLoader } from "three";

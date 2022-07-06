@@ -22,41 +22,77 @@ const Layout = ({ children }) => {
     const router = useRouter()
     const [isRouteChangeComplete, setIsRouteChangeComplete] = useState(false)
     const [center, setCenter] = useState()
+    const [isExiting, setIsExiting] = useState(false) 
+
+    useEffect(() => {
+        handlePageLoad()
+    }, [])
+
+
+    useEffect(() => {
+
+        const onRouteChangeStart = () => {
+            pageHide()
+            setIsPageReady(false)
+            setIsExiting(true)
+        }
+        const onRouteChangeComplete = () => {
+            setIsRouteChangeComplete(true)
+        }
+        router.events.on("routeChangeStart", () => {
+            onRouteChangeStart()
+        })
+        router.events.on("routeChangeComplete", () => {
+            onRouteChangeComplete()
+        })
+
+        return () => {
+            router.events.off("routeChangeStart", () => {
+                onRouteChangeStart()
+            })
+            router.events.off("routeChangeComplete", () => {
+                onRouteChangeComplete()
+            })
+        }
+    }, [])
+
+    useEffect(() => {
+        if (!isExiting && isRouteChangeComplete) {
+            setTimeout(() => {
+                pageShow();
+            }, 1800)
+        }
+    }, [isExiting, isRouteChangeComplete])
+
+    const handlePageLoad = () => {
+        setIsPageLoading(true)
+        setTimeout(() => {
+            setIsPageLoading(false)
+            document.body.classList.add('is-ready');
+            setTimeout(() => {
+                pageShow()
+            }, 2400)
+        }, 3000)
+    }
 
     const pageShow = () => {
-        if (pageTransitionMaterial.current && pageTransition.current) {
 
+        if (pageTransitionMaterial.current && pageTransition.current) {
             gsap.timeline({
                 paused: false,
                 onComplete: () => {
-                    // localTime.current.style.zIndex = '5001';
-                    // document.body.classList.add('isTransitionEnded');
-                    if (isRouteChangeComplete) {
-                        setIsRouteChangeComplete(false);
-                    }
-                    pageTransition.current.style.zIndex = '-1';
-                    setIsPageLoaded(true)
-                    document.body.classList.add('page-loaded');
+                    setIsRouteChangeComplete(false);
                     setIsEntering(false)
+                    pageTransition.current.style.zIndex = '-1';
+                    if (!isPageLoaded) {
+                        setIsPageLoaded(true)
+                    }
+                    document.body.classList.add('page-loaded');
                     setTimeout(() => {
                         setIsPageReady(true)
                     }, 500)
                 },
                 onStart: () => {
-                    // setTimeout(() => {
-                    //     setIsFirstAnimationReady(true);
-                    // }, 800)
-                    // if (!isGLFirstLoaded) {
-                    //     pageTransitionCover.current.style.zIndex = '100';
-                    // } else {
-                    //     pageTransitionCover.current.style.zIndex = '85';
-                    // }
-
-                    // if (!setIsFirstAnimationReady) {
-                    //     setTimeout(() => {
-                    //         setIsFirstAnimationReady(true);
-                    //     }, 800)
-                    // }
                     pageTransition.current.style.zIndex = '100';
                 }
             })
@@ -89,10 +125,10 @@ const Layout = ({ children }) => {
                 paused: false,
                 onStart: () => {
                     pageTransition.current.style.zIndex = '100';
-                    // document.body.classList.remove('isTransitionEnded');
                 },
                 onComplete: () => {
                     setIsEntering(true)
+                    setIsExiting(false)
                 }
             })
                 .fromTo(pageTransitionMaterial.current.uniforms.animationValue,
@@ -117,36 +153,6 @@ const Layout = ({ children }) => {
         }
     }
 
-    const handlePageLoad = () => {
-        setIsPageLoading(true)
-        setTimeout(() => {
-            setIsPageLoading(false)
-            document.body.classList.add('is-ready');
-            setTimeout(() => {
-                pageShow()
-            }, 2400)
-        }, 3000)
-    }
-
-    useEffect(() => {
-        handlePageLoad()
-        router.events.on("routeChangeStart", () => {
-            pageHide()
-            setIsPageReady(false)
-        })
-        router.events.on("routeChangeComplete", () => {
-            setIsRouteChangeComplete(true)
-        })
-    }, [])
-
-    useEffect(() => {
-        if (isEntering && isRouteChangeComplete) {
-            setTimeout(() => {
-                pageShow();
-            }, 1800)
-        }
-    }, [isEntering, isRouteChangeComplete])
-
     return (
         <div
             className="layout"
@@ -154,7 +160,6 @@ const Layout = ({ children }) => {
                 const windowHeight = window.innerHeight;
                 const centerX = e.clientX;
                 const centerY = windowHeight - e.clientY;
-
                 setCenter([centerX, centerY])
             }}
         >

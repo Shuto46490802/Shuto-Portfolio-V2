@@ -174,7 +174,7 @@ const HomeIntro = () => {
                             My name is Shuto, I'm Japanese Front-end developer currently based in Sydney.
                         </p>
                         <p className="home-intro-text-subtitle">
-                            I'm really passionate about building a website that helps you chieve you goals
+                            I'm really passionate about building a website that helps you achieve your goals
                             and looking to land a job as Front-end developer.
                             I love learing new things and challenging myself to solve problems.
                             <br />

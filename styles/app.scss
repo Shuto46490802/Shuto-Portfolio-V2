@@ -1594,7 +1594,7 @@
     padding-top: 4%;
     padding-bottom: 4%;
     @media screen and (min-width: 768px) {
-        padding-top: 5%;
+        padding-top: 200px;
         padding-bottom: 0;
     }
 }
@@ -2773,6 +2773,11 @@
     backface-visibility: hidden;
 }
 
+.cursor.is-touch{
+    z-index: -1;
+    visibility: hidden;
+}
+
 .cursor-circle__wrapper,
 .cursor-dot__wrapper,
 .cursor-circle {
@@ -2938,12 +2943,10 @@
 
     @media (min-width: 1025px) {
         font-size: 16px;
-        font-size: 1rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
         font-size: 16px;
-        font-size: 1rem;
     }
 
     @media (min-width: 415px) and (max-width: 767px) {
@@ -3009,12 +3012,10 @@
 
     @media (min-width: 1025px) {
         font-size: 24px;
-        font-size: 1.5rem;
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
         font-size: 24px;
-        font-size: 1.5rem;
     }
 
     @media (min-width: 415px) and (max-width: 767px) {

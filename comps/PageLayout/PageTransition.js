@@ -9,13 +9,33 @@ import Frame from './Frame';
 
 const PageTransition = ({ material, pageTransition, center }) => {
 
-    const { GLColor } = useGlobalStates()
- 
+    const { GLColor, isPageLoaded } = useGlobalStates()
+    const canvas = useRef()
+
+    useEffect(() => {
+        if (isPageLoaded) {
+            canvas.current.width = window.innerWidth
+            canvas.current.height = window.innerHeight
+            window.addEventListener("resize", () => {
+                canvas.current.width = window.innerWidth
+                canvas.current.height = window.innerHeight
+            })
+            return () => {
+                window.removeEventListener("resize", () => {
+                    canvas.current.width = window.innerWidth
+                    canvas.current.height = window.innerHeight
+                })
+            }
+        }
+    }, [isPageLoaded])
+
     return (
         <div ref={pageTransition} className="page-transition">
             <Frame />
             <Canvas
+                camera={{ position: [0, 0, 760] }}
                 linear={true}
+                ref={canvas}
             >
                 <Suspense
                     fallback={<Html center className="loading" children="" />}
