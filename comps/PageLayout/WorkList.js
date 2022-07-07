@@ -3,7 +3,7 @@ const workList = {
         {
             "title": "Shuto Portfolio",
             "roles": ["Development", "Design", "3D Animation"],
-            "date": "2021-09",
+            "date": "2022-06",
             "main-image": "/images/Homepage/homeIntro.jpg",
             "slug": "shuto-portfolio",
             "page content": {
